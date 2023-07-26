@@ -1,0 +1,110 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+  font-size: x-large;
+  font-family: 'Roboto Mono', monospace;;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 0.5em;
+}
+
+.container {
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  background-color: #faedcd;
+  padding: 5em;
+  border-radius: 2.5em;
+}
+
+/* Cambiar el estilo de "task-info" a una fila (inline-flex) */
+.task-info {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Agregar efecto a la clase "task-info-comp" */
+.tasks-comp {
+  display: inline-block;
+  animation: scaleEffect 2s;
+}
+
+/* Efecto animado para la clase "task-info-comp" */
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Efecto de completar tareas */
+.done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Estilo para la tarea completada (pop-up) */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Estilos para el checkbox al lado izquierdo */
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Centrar el div "container-task" */
+.container-task {
+  display: flex;
+  justify-content: center;
+}
+
+/* Agregar efecto hover al botón "Add" */
+button[title="submit"] {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[title="submit"]:hover {
+  background-color: #45a049;
+}
