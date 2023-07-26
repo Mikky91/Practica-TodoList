@@ -23,7 +23,7 @@ a {
   border-radius: 2.5em;
 }
 
-/* Cambiar el estilo de "task-info" a una fila (inline-flex) */
+
 .task-info {
   display: inline-flex;
   justify-content: space-between;
@@ -31,13 +31,13 @@ a {
   margin-bottom: 15px;
 }
 
-/* Agregar efecto a la clase "task-info-comp" */
+
 .tasks-comp {
   display: inline-block;
   animation: scaleEffect 2s;
 }
 
-/* Efecto animado para la clase "task-info-comp" */
+
 @keyframes scaleEffect {
   0% {
     transform: scale(1);
